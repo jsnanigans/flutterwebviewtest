@@ -130,7 +130,7 @@ class _InAppBrowserExampleScreenState extends State<InAppBrowserExampleScreen> {
                           useOnDownloadStart: true,
                           mediaPlaybackRequiresUserGesture: false,
                           javaScriptCanOpenWindowsAutomatically: true,
-                          applicationNameForUserAgent: "InAppTC/1.0",
+                          applicationNameForUserAgent: "TCMobileInAppBrowser/1.0",
                         ),
                       ),
                     );
