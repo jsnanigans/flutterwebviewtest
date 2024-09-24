@@ -33,7 +33,7 @@ class _WebAuthenticationSessionExampleScreenState
             title: Text(
           "WebAuthenticationSession",
         )),
-        drawer: myDrawer(context: context),
+        // drawer: myDrawer(context: context),
         body: SafeArea(
           child: Column(children: <Widget>[
             Center(

@@ -76,7 +76,7 @@ class _ChromeSafariBrowserExampleScreenState
             title: Text(
           "ChromeSafariBrowser",
         )),
-        drawer: myDrawer(context: context),
+        // drawer: myDrawer(context: context),
         body: Center(
           child: ElevatedButton(
               onPressed: () async {

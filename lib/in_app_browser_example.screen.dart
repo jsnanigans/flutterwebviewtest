@@ -110,7 +110,7 @@ class _InAppBrowserExampleScreenState extends State<InAppBrowserExampleScreen> {
             title: Text(
           "InAppBrowser",
         )),
-        drawer: myDrawer(context: context),
+        // drawer: myDrawer(context: context),
         body: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -126,20 +126,16 @@ class _InAppBrowserExampleScreenState extends State<InAppBrowserExampleScreen> {
                             presentationStyle: ModalPresentationStyle.POPOVER),
                         webViewSettings: InAppWebViewSettings(
                           isInspectable: kDebugMode,
-                          useShouldOverrideUrlLoading: true,
-                          useOnLoadResource: true,
+                          allowsInlineMediaPlayback: true,
+                          useOnDownloadStart: true,
+                          mediaPlaybackRequiresUserGesture: false,
+                          javaScriptCanOpenWindowsAutomatically: true,
+                          applicationNameForUserAgent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36 InAppTC/1.0",
                         ),
                       ),
                     );
                   },
                   child: Text("Open In-App Browser")),
-              Container(height: 40),
-              ElevatedButton(
-                  onPressed: () async {
-                    await InAppBrowser.openWithSystemBrowser(
-                        url: WebUri("http://localhost:3000"));
-                  },
-                  child: Text("Open System Browser")),
             ])));
   }
 }

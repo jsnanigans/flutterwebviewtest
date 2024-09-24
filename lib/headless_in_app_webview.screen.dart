@@ -66,7 +66,7 @@ class _HeadlessInAppWebViewExampleScreenState
             title: Text(
           "HeadlessInAppWebView",
         )),
-        drawer: myDrawer(context: context),
+        // drawer: myDrawer(context: context),
         body: SafeArea(
             child: Column(children: <Widget>[
           Container(

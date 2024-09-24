@@ -40,121 +40,121 @@ Future main() async {
   runApp(MyApp());
 }
 
-PointerInterceptor myDrawer({required BuildContext context}) {
-  var children = [
-    ListTile(
-      title: Text('InAppWebView'),
-      onTap: () {
-        Navigator.pushReplacementNamed(context, '/');
-      },
-    ),
-    ListTile(
-      title: Text('InAppBrowser'),
-      onTap: () {
-        Navigator.pushReplacementNamed(context, '/InAppBrowser');
-      },
-    ),
-    ListTile(
-      title: Text('ChromeSafariBrowser'),
-      onTap: () {
-        Navigator.pushReplacementNamed(context, '/ChromeSafariBrowser');
-      },
-    ),
-    ListTile(
-      title: Text('WebAuthenticationSession'),
-      onTap: () {
-        Navigator.pushReplacementNamed(context, '/WebAuthenticationSession');
-      },
-    ),
-    ListTile(
-      title: Text('HeadlessInAppWebView'),
-      onTap: () {
-        Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
-      },
-    ),
-  ];
-  if (kIsWeb) {
-    children = [
-      ListTile(
-        title: Text('InAppWebView'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/');
-        },
-      )
-    ];
-  } else if (defaultTargetPlatform == TargetPlatform.macOS) {
-    children = [
-      // ListTile(
-      //   title: Text('InAppWebView'),
-      //   onTap: () {
-      //     Navigator.pushReplacementNamed(context, '/');
-      //   },
-      // ),
-      // ListTile(
-      //   title: Text('InAppBrowser'),
-      //   onTap: () {
-      //     Navigator.pushReplacementNamed(context, '/InAppBrowser');
-      //   },
-      // ),
-      ListTile(
-        title: Text('InAppBrowser'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/');
-        },
-      ),
-      ListTile(
-        title: Text('WebAuthenticationSession'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/WebAuthenticationSession');
-        },
-      ),
-      ListTile(
-        title: Text('HeadlessInAppWebView'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
-        },
-      ),
-    ];
-  } else if (defaultTargetPlatform == TargetPlatform.windows ||
-      defaultTargetPlatform == TargetPlatform.linux) {
-    children = [
-      ListTile(
-        title: Text('InAppWebView'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/');
-        },
-      ),
-      ListTile(
-        title: Text('InAppBrowser'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/InAppBrowser');
-        },
-      ),
-      ListTile(
-        title: Text('HeadlessInAppWebView'),
-        onTap: () {
-          Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
-        },
-      ),
-    ];
-  }
-  return PointerInterceptor(
-    child: Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            child: Text('zikzak_inappwebview example'),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-          ),
-          ...children
-        ],
-      ),
-    ),
-  );
-}
+// PointerInterceptor myDrawer({required BuildContext context}) {
+//   var children = [
+//     // ListTile(
+//     //   title: Text('InAppWebView'),
+//     //   onTap: () {
+//     //     Navigator.pushReplacementNamed(context, '/');
+//     //   },
+//     // ),
+//     ListTile(
+//       title: Text('InAppBrowser'),
+//       onTap: () {
+//         Navigator.pushReplacementNamed(context, '/');
+//       },
+//     ),
+//     ListTile(
+//       title: Text('ChromeSafariBrowser'),
+//       onTap: () {
+//         Navigator.pushReplacementNamed(context, '/ChromeSafariBrowser');
+//       },
+//     ),
+//     ListTile(
+//       title: Text('WebAuthenticationSession'),
+//       onTap: () {
+//         Navigator.pushReplacementNamed(context, '/WebAuthenticationSession');
+//       },
+//     ),
+//     ListTile(
+//       title: Text('HeadlessInAppWebView'),
+//       onTap: () {
+//         Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
+//       },
+//     ),
+//   ];
+//   if (kIsWeb) {
+//     children = [
+//       ListTile(
+//         title: Text('InAppWebView'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/');
+//         },
+//       )
+//     ];
+//   } else if (defaultTargetPlatform == TargetPlatform.macOS) {
+//     children = [
+//       // ListTile(
+//       //   title: Text('InAppWebView'),
+//       //   onTap: () {
+//       //     Navigator.pushReplacementNamed(context, '/');
+//       //   },
+//       // ),
+//       // ListTile(
+//       //   title: Text('InAppBrowser'),
+//       //   onTap: () {
+//       //     Navigator.pushReplacementNamed(context, '/InAppBrowser');
+//       //   },
+//       // ),
+//       ListTile(
+//         title: Text('InAppBrowser'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/');
+//         },
+//       ),
+//       ListTile(
+//         title: Text('WebAuthenticationSession'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/WebAuthenticationSession');
+//         },
+//       ),
+//       ListTile(
+//         title: Text('HeadlessInAppWebView'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
+//         },
+//       ),
+//     ];
+//   } else if (defaultTargetPlatform == TargetPlatform.windows ||
+//       defaultTargetPlatform == TargetPlatform.linux) {
+//     children = [
+//       // ListTile(
+//       //   title: Text('InAppWebView'),
+//       //   onTap: () {
+//       //     Navigator.pushReplacementNamed(context, '/');
+//       //   },
+//       // ),
+//       ListTile(
+//         title: Text('InAppBrowser'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/');
+//         },
+//       ),
+//       ListTile(
+//         title: Text('HeadlessInAppWebView'),
+//         onTap: () {
+//           Navigator.pushReplacementNamed(context, '/HeadlessInAppWebView');
+//         },
+//       ),
+//     ];
+//   }
+//   return PointerInterceptor(
+//     // child: Drawer(
+//     //   child: ListView(
+//     //     padding: EdgeInsets.zero,
+//     //     children: <Widget>[
+//     //       DrawerHeader(
+//     //         child: Text('zikzak_inappwebview example'),
+//     //         decoration: BoxDecoration(
+//     //           color: Colors.blue,
+//     //         ),
+//     //       ),
+//     //       ...children
+//     //     ],
+//     //   ),
+//     // ),
+//   );
+// }
 
 class MyApp extends StatefulWidget {
   @override
@@ -192,15 +192,15 @@ class _MyAppState extends State<MyApp> {
     } else if (defaultTargetPlatform == TargetPlatform.windows ||
         defaultTargetPlatform == TargetPlatform.linux) {
       return MaterialApp(initialRoute: '/', routes: {
-        '/': (context) => InAppWebViewExampleScreen(),
-        '/InAppBrowser': (context) => InAppBrowserExampleScreen(),
+        // '/': (context) => InAppWebViewExampleScreen(),
+        '/': (context) => InAppBrowserExampleScreen(),
         '/HeadlessInAppWebView': (context) =>
             HeadlessInAppWebViewExampleScreen(),
       });
     }
     return MaterialApp(initialRoute: '/', routes: {
-      '/': (context) => InAppWebViewExampleScreen(),
-      '/InAppBrowser': (context) => InAppBrowserExampleScreen(),
+      // '/': (context) => InAppWebViewExampleScreen(),
+      '/': (context) => InAppBrowserExampleScreen(),
       '/ChromeSafariBrowser': (context) => ChromeSafariBrowserExampleScreen(),
       '/HeadlessInAppWebView': (context) => HeadlessInAppWebViewExampleScreen(),
       '/WebAuthenticationSession': (context) =>
